@@ -27,7 +27,7 @@ subprojects {
 publishing {
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/navikt/pale-2-common")
+            url = uri("https://maven.pkg.github.com/navikt/padm-common")
             credentials {
                 username = System.getenv("GITHUB_USERNAME")
                 password = System.getenv("GITHUB_PASSWORD")
@@ -38,9 +38,9 @@ publishing {
         create<MavenPublication>("mavenJava") {
 
             pom {
-                name.set("pale-2-common-ws")
-                description.set("Bibliotek for web-services implemenering i legeerklæring domenet")
-                url.set("https://github.com/navikt/pale-2-common")
+                name.set("padm-common-ws")
+                description.set("Bibliotek for web-services implemenering i dialogmeldinger domenet")
+                url.set("https://github.com/navikt/padm-common")
                 licenses {
                     license {
                         name.set("MIT License")
@@ -49,9 +49,9 @@ publishing {
                 }
 
                 scm {
-                    connection.set("scm:git:https://github.com/navikt/pale-2-common.git")
-                    developerConnection.set("scm:git:https://github.com/navikt/pale-2-common.git")
-                    url.set("https://github.com/navikt/pale-2-common")
+                    connection.set("scm:git:https://github.com/navikt/padm-common.git")
+                    developerConnection.set("scm:git:https://github.com/navikt/padm-common.git")
+                    url.set("https://github.com/navikt/padm-common")
                 }
             }
             from(components["java"])

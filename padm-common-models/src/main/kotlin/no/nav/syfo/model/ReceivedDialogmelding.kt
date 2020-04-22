@@ -3,7 +3,7 @@ package no.nav.syfo.model
 import java.time.LocalDateTime
 
 data class ReceivedDialogmelding(
-    val legeerklaering: Dialogmelding,
+    val dialogmelding: Dialogmelding,
     val personNrPasient: String,
     val pasientAktoerId: String,
     val personNrLege: String,

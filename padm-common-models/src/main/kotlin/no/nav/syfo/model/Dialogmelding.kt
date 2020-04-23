@@ -11,7 +11,7 @@ data class Dialogmelding(
 data class Notat(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
-    val dokIdNotat: Boolean,
+    val dokIdNotat: String,
     val foresporsel: Foresporsel
 )
 

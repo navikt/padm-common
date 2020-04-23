@@ -10,14 +10,14 @@ data class Dialogmelding(
     val dialogmeldingForesporsel: DialogmeldingForesporsel?
 )
 
-data class DialogmeldingSvar(
+data class DialogmeldingForesporsel(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,
     val foresporsel: Foresporsel
 )
 
-data class DialogmeldingForesporsel(
+data class DialogmeldingSvar(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String
 )

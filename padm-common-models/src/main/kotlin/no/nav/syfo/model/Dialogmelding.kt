@@ -9,23 +9,27 @@ data class Dialogmelding(
 )
 
 data class DialogmeldingSvar(
-    val svar: String
-)
-
-data class DialogmeldingForesporsel(
-    val foresporsel: String
-)
-
-data class DialogmeldingNotat(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,
     val foresporsel: Foresporsel
 )
 
+data class DialogmeldingForesporsel(
+    val teamakode: TemaKode,
+    val tekstNotatInnhold: String
+)
+
+data class DialogmeldingNotat(
+    val teamakode: TemaKode,
+    val tekstNotatInnhold: String,
+    val dokIdNotat: String,
+    val datoNotat: String
+)
+
 data class TemaKode(
     val dn: String,
-    val ot: String,
+    val ot: String?,
     val s: String,
     val v: String
 )

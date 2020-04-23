@@ -1,5 +1,7 @@
 package no.nav.syfo.model
 
+import java.time.LocalDate
+
 
 data class Dialogmelding(
     val id: String,
@@ -24,7 +26,7 @@ data class DialogmeldingNotat(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,
-    val datoNotat: String
+    val datoNotat: LocalDate
 )
 
 data class TemaKode(

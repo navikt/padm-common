@@ -3,12 +3,20 @@ package no.nav.syfo.model
 
 data class Dialogmelding(
     val id: String,
-    val dialogmeldingNotat: Boolean,
-    val dialogmeldingSvar: Boolean,
-    val notat: Notat
+    val dialogmeldingNotat: DialogmeldingNotat?,
+    val dialogmeldingSvar: DialogmeldingSvar?,
+    val DialogmeldingForesporsel: DialogmeldingForesporsel?
 )
 
-data class Notat(
+data class DialogmeldingSvar(
+    val svar: String
+)
+
+data class DialogmeldingForesporsel(
+    val foresporsel: String
+)
+
+data class DialogmeldingNotat(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,

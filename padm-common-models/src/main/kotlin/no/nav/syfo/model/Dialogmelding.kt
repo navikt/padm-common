@@ -5,7 +5,7 @@ data class Dialogmelding(
     val id: String,
     val dialogmeldingNotat: DialogmeldingNotat?,
     val dialogmeldingSvar: DialogmeldingSvar?,
-    val DialogmeldingForesporsel: DialogmeldingForesporsel?
+    val dialogmeldingForesporsel: DialogmeldingForesporsel?
 )
 
 data class DialogmeldingSvar(

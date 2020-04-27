@@ -7,7 +7,19 @@ data class Dialogmelding(
     val id: String,
     val dialogmeldingNotat: DialogmeldingNotat?,
     val dialogmeldingSvar: DialogmeldingSvar?,
-    val dialogmeldingForesporsel: DialogmeldingForesporsel?
+    val dialogmeldingForesporsel: DialogmeldingForesporsel?,
+    val helsepersonell: Helsepersonell
+)
+data class Helsepersonell(
+    val navn: Navn,
+    val hpr: String?,
+    val tlf: String?
+)
+
+data class Navn(
+    val fornavn: String,
+    val mellomnavn: String?,
+    val etternavn: String
 )
 
 data class DialogmeldingForesporsel(

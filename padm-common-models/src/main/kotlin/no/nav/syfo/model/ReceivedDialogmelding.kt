@@ -16,7 +16,6 @@ data class ReceivedDialogmelding(
     val legekontorOrgName: String,
     val mottattDato: LocalDateTime,
     val legehpr: String?,
-    val legetlf: String?,
     /**
      * Full fellesformat as a XML payload, this is only used for infotrygd compat and should be removed in thefuture
      */

@@ -9,19 +9,8 @@ data class Dialogmelding(
     val dialogmeldingNotat: DialogmeldingNotat?,
     val dialogmeldingSvar: DialogmeldingSvar?,
     val dialogmeldingForesporsel: DialogmeldingForesporsel?,
-    val helsepersonell: Helsepersonell,
+    val navnHelsepersonell: String,
     val signaturDato: LocalDateTime
-)
-data class Helsepersonell(
-    val navn: Navn,
-    val hpr: String?,
-    val tlf: String?
-)
-
-data class Navn(
-    val fornavn: String,
-    val mellomnavn: String?,
-    val etternavn: String
 )
 
 data class DialogmeldingForesporsel(

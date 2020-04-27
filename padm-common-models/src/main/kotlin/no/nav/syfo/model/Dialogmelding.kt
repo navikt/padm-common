@@ -1,6 +1,7 @@
 package no.nav.syfo.model
 
 import java.time.LocalDate
+import java.time.LocalDateTime
 
 
 data class Dialogmelding(
@@ -8,7 +9,8 @@ data class Dialogmelding(
     val dialogmeldingNotat: DialogmeldingNotat?,
     val dialogmeldingSvar: DialogmeldingSvar?,
     val dialogmeldingForesporsel: DialogmeldingForesporsel?,
-    val helsepersonell: Helsepersonell
+    val helsepersonell: Helsepersonell,
+    val signaturDato: LocalDateTime
 )
 data class Helsepersonell(
     val navn: Navn,

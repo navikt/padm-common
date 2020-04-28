@@ -10,14 +10,7 @@ data class Dialogmelding(
     val dialogmeldingSvar: DialogmeldingSvar?,
     val dialogmeldingForesporsel: DialogmeldingForesporsel?,
     val navnHelsepersonell: String,
-    val signaturDato: LocalDateTime,
-    val vedlegg: List<Vedlegg>?
-)
-
-data class Vedlegg(
-    val mimeType: String,
-    val beskrivelse: String,
-    val contentBase64: ByteArray
+    val signaturDato: LocalDateTime
 )
 
 data class DialogmeldingForesporsel(

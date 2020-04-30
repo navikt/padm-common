@@ -28,7 +28,9 @@ data class DialogmeldingInnkallingDialogmote(
 
 data class DialogmeldingHenvendelseFraLege(
     val teamakode: TemaKode,
-    val tekstNotatInnhold: String
+    val tekstNotatInnhold: String,
+    val dokIdNotat: String?,
+    val datoNotat: LocalDateTime?
 )
 
 data class TemaKode(

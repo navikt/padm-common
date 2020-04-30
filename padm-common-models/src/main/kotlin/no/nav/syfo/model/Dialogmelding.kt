@@ -15,15 +15,15 @@ data class Dialogmelding(
 data class HenvendelseFraLegeHenvendelse(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
-    val dokIdNotat: String,
-    val foresporsel: Foresporsel
+    val dokIdNotat: String?,
+    val foresporsel: Foresporsel?
 )
 
 data class InnkallingMoterespons(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
-    val dokIdNotat: String,
-    val foresporsel: Foresporsel
+    val dokIdNotat: String?,
+    val foresporsel: Foresporsel?
 )
 
 data class TemaKode(

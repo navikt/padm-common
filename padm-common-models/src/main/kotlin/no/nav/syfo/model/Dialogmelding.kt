@@ -1,35 +1,34 @@
 package no.nav.syfo.model
 
-import java.time.LocalDate
 import java.time.LocalDateTime
 
 
 data class Dialogmelding(
     val id: String,
-    val dialogmeldingNotat: DialogmeldingNotat?,
-    val dialogmeldingSvar: DialogmeldingSvar?,
-    val dialogmeldingForesporsel: DialogmeldingForesporsel?,
+    val dialogmeldingHenvendelseFraLege: DialogmeldingHenvendelseFraLege?,
+    val dialogmeldingInnkallingDialogmote: DialogmeldingInnkallingDialogmote?,
+    val dialogmeldingForesporselOmPasier: DialogmeldingForesporselOmPasient?,
     val navnHelsepersonell: String,
     val signaturDato: LocalDateTime
 )
 
-data class DialogmeldingForesporsel(
+data class DialogmeldingForesporselOmPasient(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,
     val foresporsel: Foresporsel
 )
 
-data class DialogmeldingSvar(
-    val teamakode: TemaKode,
-    val tekstNotatInnhold: String
-)
-
-data class DialogmeldingNotat(
+data class DialogmeldingInnkallingDialogmote(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,
-    val datoNotat: LocalDate
+    val foresporsel: Foresporsel
+)
+
+data class DialogmeldingHenvendelseFraLege(
+    val teamakode: TemaKode,
+    val tekstNotatInnhold: String
 )
 
 data class TemaKode(

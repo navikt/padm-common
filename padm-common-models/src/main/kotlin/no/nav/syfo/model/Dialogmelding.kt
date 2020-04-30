@@ -5,28 +5,40 @@ import java.time.LocalDateTime
 
 data class Dialogmelding(
     val id: String,
-    val dialogmeldingHenvendelseFraLege: DialogmeldingHenvendelseFraLege?,
-    val dialogmeldingInnkallingDialogmote: DialogmeldingInnkallingDialogmote?,
-    val dialogmeldingForesporselOmPasier: DialogmeldingForesporselOmPasient?,
+    val innkallingMoterespons: InnkallingMoterespons?,
+    val foresporselFraSaksbehandlerForesporselSvar: ForesporselFraSaksbehandlerForesporselSvar?,
+    val henvendelseFraLegeHenvendelse: HenvendelseFraLegeHenvendelse?,
     val navnHelsepersonell: String,
     val signaturDato: LocalDateTime
 )
 
-data class DialogmeldingForesporselOmPasient(
+data class HenvendelseFraLegeHenvendelse(
+    val typeMelding: TypeMelding,
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,
     val foresporsel: Foresporsel
 )
 
-data class DialogmeldingInnkallingDialogmote(
+data class InnkallingMoterespons(
+    val typeMelding: TypeMelding,
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String,
     val foresporsel: Foresporsel
 )
 
-data class DialogmeldingHenvendelseFraLege(
+data class TypeMelding(
+    val kodeverkOID: String,
+    val dn: String,
+    val v: String,
+    val arenaNotatKategori: String,
+    val arenaNotatKode: String,
+    val arenaNotatTittel: String
+)
+
+data class ForesporselFraSaksbehandlerForesporselSvar(
+    val typeMelding: TypeMelding,
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String?,

@@ -16,7 +16,8 @@ data class HenvendelseFraLegeHenvendelse(
     val teamakode: TemaKode,
     val tekstNotatInnhold: String,
     val dokIdNotat: String?,
-    val foresporsel: Foresporsel?
+    val foresporsel: Foresporsel?,
+    val rollerRelatertNotat: RollerRelatertNotat?
 )
 
 data class InnkallingMoterespons(
@@ -47,7 +48,7 @@ data class Foresporsel(
     val typeForesp: TypeForesp,
     val sporsmal: String,
     val dokIdForesp: String,
-    val rollerRelatertNotat: RollerRelatertNotat
+    val rollerRelatertNotat: RollerRelatertNotat?
 )
 
 data class RollerRelatertNotat(

@@ -52,7 +52,13 @@ data class Foresporsel(
 
 data class RollerRelatertNotat(
     val rolleNotat: RolleNotat,
-    val person: Person
+    val person: Person?,
+    val helsepersonell: Helsepersonell?
+)
+
+data class Helsepersonell(
+    val givenName: String,
+    val familyName: String
 )
 
 data class Person(

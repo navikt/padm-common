@@ -52,7 +52,7 @@ data class Foresporsel(
 )
 
 data class RollerRelatertNotat(
-    val rolleNotat: RolleNotat,
+    val rolleNotat: RolleNotat?,
     val person: Person?,
     val helsepersonell: Helsepersonell?
 )
